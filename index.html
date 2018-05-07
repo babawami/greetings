@@ -6,37 +6,44 @@
     <link rel="stylesheet" href="css/greet.css" type="text/css">
     <link rel="stylesheet" href="css/skeleton.css" type="text/css">
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <script src="greet-function.js" charset="utf-8"></script>
+    <script src="greet.js" charset="utf-8"></script>
 
     <title></title>
   </head>
   <body>
-    <div class="container">
-      <h1>Greetings</h1>
+  <div class="container">
+    <div style="margin-top:10%;"></div>
+    <div class="row">
+      <h1 class="twelve columns">Greetings</h1>
+    </div>
+
       <div class="">
       <span>Name </span>   <input type="text" name="greetName" placeholder="Enter Name" class="greetName" value=""> <span class="counter">0</span>
       </div>
       <br>
+
       <div class="">
         <input type="radio" name="languageTypeRadio" class="languageTypeRadio" value="english" checked >
         <span class="label-body">English</span>
         <input type="radio" name="languageTypeRadio" class="languageTypeRadio" value="afrikaans">
         <span class="label-body">Afrikaans</span>
-        <input type="radio" name="languageTypeRadio" class="languageTypeRadio" value="xhosa">
-        <span class="label-body">Xhosa</span>
+        <input type="radio" name="languageTypeRadio" class="languageTypeRadio" value="sotho">
+        <span class="label-body">Sesotho</span>
       </div>
       <br>
+
       <div class="">
         <button type="button" name="button" class="greetButton">Greet</button>
+        <button type="button" name="button" class="resetButton">Reset</button>
       </div>
       <br>
+
       <div class="">
       <div class="displayGreeting"></div>
       </div>
 
-    </div>
+  </div>
 
-  </body>
-    <script src="greet-function.js" charset="utf-8"></script>
-  <script src="greet.js" charset="utf-8"></script>
-
+</body>
 </html>

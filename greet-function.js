@@ -1,45 +1,58 @@
-function GreetingsLogic(){
+function GreetingsLogic(storedUsers) {
   // letiables
   let EnterName = "";
   let namesGreeted = {};
-  let updateCount = 0;
   let languageGreeting = "";
 
-       function addToCounter(EnterName){
-        if(EnterName !== ""){
-        //when the greet button is pressed check if this user was already greeted before
-        //by looking if the userName exists in namesGreeted if not increment this counter and update the screen
-        if (namesGreeted[EnterName] === undefined){
+// object takes in the latest input and stored.
+  if (storedUsers) {
+    namesGreeted = storedUsers
+  }
+
+  function chooseGreeting(typeOfLanguage, name) {
+
+
+    if (name !== "") {
+      EnterName = name;
+      //when the greet button is pressed check if this user was already greeted before
+      //by looking if the userName exists in namesGreeted if not increment this counter and update the screen
+      if (namesGreeted[EnterName] === undefined) {
         //add an entry for the user that was greeted in the Object Map
-         namesGreeted[EnterName] = 0;
-         updateCount++;
-         }
-        }
+        namesGreeted[EnterName] = 0;
       }
-
-        function chooseGreeting(typeOfLanguage){
-          if (typeOfLanguage === "english"){
-             languageGreeting = 'Hello,';
-          }
-
-          if (typeOfLanguage === "afrikaans"){
-            languageGreeting = 'Goeie dag,' ;
-          }
-
-          if (typeOfLanguage === "xhosa"){
-             languageGreeting =  'Molo,';
-          }
-
-        }
-
-        return{
-        addCounter : addToCounter,
-        selectGreeting: chooseGreeting,
-        updateCounter: function(){
-          return updateCount
-        },
-        greetingsLanguage: function(){
-          return languageGreeting
-        }
     }
- }
+
+    if (typeOfLanguage === "english") {
+      return 'Hello,' + " " + name;
+    }
+
+    if (typeOfLanguage === "afrikaans") {
+      return 'Goeie Dag,' + " " + name;
+    }
+
+    if (typeOfLanguage === "sotho") {
+      return 'Dumela,' + " " + name;
+    }
+
+  }
+
+  function countNames() {
+    return Object.keys(namesGreeted).length
+  }
+
+  function returnMap() {
+    return namesGreeted
+  }
+
+  function resetStorage() {
+    return namesGreeted = {}
+  }
+
+
+  return {
+    reset: resetStorage,
+    map: returnMap,
+    selectGreeting: chooseGreeting,
+    countUsers: countNames,
+  }
+}
