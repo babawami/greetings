@@ -18,15 +18,17 @@ document.addEventListener('DOMContentLoaded', function() {
     if (EnterName !== "") {
       let languageGreeting = greetingsFactory.selectGreeting(checkedRadioBtn.value, EnterName);
       displayGreeting.innerHTML = languageGreeting;
-    }
+      displayGreeting.classList.add("addColor");
 
-    else {
+    } else {
       alert('Please enter your name')
     }
+
     // create storage to store the map use stringify to convert object into string
     localStorage.setItem('users', JSON.stringify(greetingsFactory.map()));
     //  display the number from the array
     counter.innerHTML = greetingsFactory.countUsers();
+
   }
 
   greetBtn.addEventListener('click', function() {
@@ -37,11 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   });
 
-    resetBtn.addEventListener('click', function(){
-      greetingsFactory.reset()
-      localStorage.clear();
-      counter.innerHTML = 0;
-      displayGreeting.innerHTML  = "";
+  resetBtn.addEventListener('click', function() {
+    greetingsFactory.reset()
+    localStorage.clear();
+    counter.innerHTML = 0;
+    displayGreeting.innerHTML = "";
     //location.reload();
   });
 

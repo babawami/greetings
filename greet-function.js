@@ -4,7 +4,7 @@ function GreetingsLogic(storedUsers) {
   let namesGreeted = {};
   let languageGreeting = "";
 
-// object takes in the latest input and stored.
+  // object takes in the latest input and stored.
   if (storedUsers) {
     namesGreeted = storedUsers
   }
