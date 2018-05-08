@@ -25,14 +25,11 @@
 .counter {
   font-size: 25px;
   font-weight: bold;
+  width: 100%
 }
 
 .one {
   font-size: 25px;
-}
-
-.header{
-  background-color:
 }
 
 .header{
