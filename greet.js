@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let greetingsFactory = GreetingsLogic(storedUsers); //Instance
   counter.innerHTML = greetingsFactory.countUsers(); // display number when refreshed
 
-  function countGreetings() {
+    function countGreetings() {
     let EnterName = nameElem.value;
     let checkedRadioBtn = document.querySelector("input[name='languageTypeRadio']:checked");
 
@@ -37,9 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (nameElem.value = "") {
       nameElem.value = "";
     }
-
-
-
   });
 
   resetBtn.addEventListener('click', function() {
