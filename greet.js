@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let displayGreeting = document.querySelector('.displayGreeting');
   let greetBtn = document.querySelector('.greetButton');
   let resetBtn = document.querySelector('.resetButton');
+  let showAlert = document.querySelector('.captureDetail');
 
   // Read item: get stored names in the map
   let storedUsers = JSON.parse(localStorage.getItem('users'))
@@ -12,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
   counter.innerHTML = greetingsFactory.countUsers(); // display number when refreshed
 
   function countGreetings() {
-    let EnterName = nameElem.value.toUpperCase();
+    let EnterName = nameElem.value;
     let checkedRadioBtn = document.querySelector("input[name='languageTypeRadio']:checked");
 
     if (EnterName !== "") {
@@ -20,7 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
       displayGreeting.innerHTML = languageGreeting;
       displayGreeting.classList.add("addColor");
 
-    } else {
+    }
+    else {
       alert('Please enter your name')
     }
 
@@ -28,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
     localStorage.setItem('users', JSON.stringify(greetingsFactory.map()));
     //  display the number from the array
     counter.innerHTML = greetingsFactory.countUsers();
-
   }
 
   greetBtn.addEventListener('click', function() {
@@ -36,6 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (nameElem.value = "") {
       nameElem.value = "";
     }
+
+
 
   });
 

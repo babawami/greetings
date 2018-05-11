@@ -15,6 +15,7 @@
 
 .addColor {
   background-color: yellow;
+  text-transform:capitalize;
 }
 
 .greetButton, .resetButton {
@@ -34,4 +35,5 @@
 
 .header{
   background-color: #E8F3EC
+
 }
