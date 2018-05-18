@@ -23,15 +23,15 @@ function GreetingsLogic(storedUsers) {
     }
 
     if (typeOfLanguage === "english") {
-      return 'Hello,' + " " + name;
+      return 'Hello, ' + name;
     }
 
     if (typeOfLanguage === "afrikaans") {
-      return 'Goeie Dag,' + " " + name;
+      return 'Goeie Dag, ' + name;
     }
 
     if (typeOfLanguage === "sotho") {
-      return 'Dumela,' + " " + name;
+      return 'Dumela, ' + name;
     }
 
   }
