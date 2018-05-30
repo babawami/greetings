@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let EnterName = nameElem.value.toUpperCase();
     let checkedRadioBtn = document.querySelector("input[name='languageTypeRadio']:checked");
 
-    if (EnterName !== "") {
+    if (EnterName !== "" &&  isNaN(EnterName) ) {
       let languageGreeting = greetingsFactory.selectGreeting(checkedRadioBtn.value, EnterName);
       displayGreeting.innerHTML = languageGreeting;
       displayGreeting.classList.add("addColor");
