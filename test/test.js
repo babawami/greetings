@@ -17,8 +17,8 @@ describe("Greetings function, be able to count number of people greeted", functi
     greetingsFactory.selectGreeting('english', 'Tshepo');
     greetingsFactory.selectGreeting('english', 'Tshepo');
     assert.deepEqual(greetingsFactory.map(), {
-      Andrew: 0,
-      Tshepo: 0
+      ANDREW: 0,
+      TSHEPO: 0
     })
   })
   it("return number of the names in the map", function() {
