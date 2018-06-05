@@ -13,7 +13,7 @@ function GreetingsLogic(storedUsers) {
 
 
     if (name !== "") {
-      EnterName = name;
+      EnterName = name.toUpperCase();
       //when the greet button is pressed check if this user was already greeted before
       //by looking if the userName exists in namesGreeted if not increment this counter and update the screen
       if (namesGreeted[EnterName] === undefined) {

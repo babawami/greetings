@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
   counter.innerHTML = greetingsFactory.countUsers(); // display number when refreshed
 
     function countGreetings() {
-    let EnterName = nameElem.value.toUpperCase();
+    let EnterName = nameElem.value;
     let checkedRadioBtn = document.querySelector("input[name='languageTypeRadio']:checked");
 
     if (EnterName !== "" &&  isNaN(EnterName) ) {
